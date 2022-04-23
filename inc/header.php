@@ -14,6 +14,14 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
+        <div class="container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../admin/index.php">Home</a>
+            </div>
+    </nav>
+    </div>
 </body>
 
 </html>

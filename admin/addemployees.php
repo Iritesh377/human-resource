@@ -52,18 +52,17 @@ if (mysqli_num_rows($result) === 1) {
 ?>
 
 <body>
-  <div class="body-box" style="padding-top:100px;">
+  <div class="body-box" style="padding-top:50px;">
     <form action="addemployees.php" method="POST" enctype="multipart/form-data">
-      <div class="container px-4">
-        <div>
-          <center>
-            <h2><?php echo $title ?></h2>
-          </center>
-          <div class="text-danger">
+      <div class="container mt-5">
+        <div class="wrap">
+          <h1><?php echo $title; ?></h1>
+          <h6 class="text-danger">
             <?php if (isset($_GET['error'])) { ?>
               <p class="error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
-          </div>
+
+          </h6>
         </div>
 
         <div class="row row-cols-2">
@@ -145,18 +144,4 @@ if (mysqli_num_rows($result) === 1) {
     <button type="submit" name="addemp" class="btn btn-primary">Submit</button>
   </div>
   </form>
-
-  </div>
-
-  </div>
-
-  </div>
-
-
-
-
-
-
-
-
-  <script src="../js/script.js"></script>
+</body>
