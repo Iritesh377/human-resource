@@ -1,0 +1,60 @@
+.wrap {
+  text-align: center;
+  margin-top: 2rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.card-single {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: rgb(224, 212, 212);
+  padding: 2rem;
+  border-radius: 5px;
+  height: 120px;
+}
+.card-single h1 {
+  text-decoration: none;
+}
+.card-single a {
+  text-decoration: none;
+  color: black;
+}
+.cnt-wrap {
+  margin-left: 100px;
+}
+table {
+  border-collapse: collapse;
+}
+
+thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+thead td {
+  font-weight: 700;
+}
+
+td {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+td .status {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+tr td:last-child {
+  display: flex;
+  align-items: center;
+}
