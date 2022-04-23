@@ -106,6 +106,26 @@ include_once("../inc/header.php");
                                 <th>Email:</td>
                                 <td><?php echo $data['email']; ?></th>
                             </tr>
+                            <tr>
+                                <th>EmployeeID:</td>
+                                <td><?php echo $data2['id']; ?></th>
+                            </tr>
+                            <tr>
+                                <th>Department:</td>
+                                <td><?php echo $data2['department']; ?></th>
+                            </tr>
+                            <tr>
+                                <th>designation:</td>
+                                <td><?php echo $data2['designation']; ?></th>
+                            </tr>
+                            <tr>
+                                <th>DOJ:</td>
+                                <td><?php echo $data2['doj']; ?></th>
+                            </tr>
+                            <tr>
+                                <th>Joining Salary:</td>
+                                <td><?php echo $data2['joiningsalary']; ?></th>
+                            </tr>
                         </table>
                     </div>
 

@@ -1,5 +1,5 @@
 <?php
-$title = "Update";
+$title = "Update Records";
 include_once('../inc/header.php');
 include_once('../inc/db_conn.php');
 if (isset($_GET['updateid'])) {
@@ -50,7 +50,7 @@ if (isset($_POST['updateemp'])) {
     $result1 = mysqli_query($conn, $sql1);
 
     mysqli_commit($conn);
-    header("Location: addemployees.php?error=Employee Record Updated Succesfully");
+    header("Location: showall.php?error=Employee Record Updated Succesfully");
     exit();
   } catch (mysqli_sql_exception $exception) {
     mysqli_rollback($conn);
@@ -65,7 +65,7 @@ if (isset($_POST['updateemp'])) {
   <div class="body-box" style="padding-top:100px;">
     <form action="update.php?updateid=<?php echo $globalid; ?>" method="POST">
       <div class="container px-4">
-        <div>
+        <div class="mb-5">
           <center>
             <h2><?php echo $title ?></h2>
           </center>
@@ -93,9 +93,9 @@ if (isset($_POST['updateemp'])) {
               </div>
               <div class="mb-2">
                 <label for="dob" class="form-label">Date Of Birth:</label>
-                <input type="date" name="dob" class="form-control" id="dob" value="<?php echo $data['dob']; ?>>
+                <input type="date" name="dob" class="form-control" id="dob" value="<?php echo $data['dob']; ?>">
               </div>
-              <div class=" input-group mb-2 py-1">
+              <div class="input-group mb-2 py-1">
                 <label class="input-group-text" for="gender">Gender:</label>
                 <select name="gender" class="form-select" id="gender">
                   <option>Select...</option>
@@ -105,13 +105,13 @@ if (isset($_POST['updateemp'])) {
               </div>
               <div class="mb-2">
                 <label for="phone" class="form-label">Phone:</label>
-                <input type="number" name="phone" class="form-control" id="phone" value="<?php echo $data['phone']; ?>>
+                <input type="number" name="phone" class="form-control" id="phone" value="<?php echo $data['phone']; ?>">
               </div>
-              <div class=" mb-2">
+              <div class="mb-2">
                 <label for="address" class="form-label">Full Address:</label>
-                <input type="text" class="form-control" name="fulladdress" id="address" value="<?php echo $data['fulladdress']; ?>>
+                <input type="text" class="form-control" name="fulladdress" id="address" value="<?php echo $data['fulladdress']; ?>">
               </div>
-              <div class=" mb-2">
+              <div class="mb-2">
                 <label for="empemail" class="form-label">Email address:</label>
                 <input type="email" class="form-control" name="email" id="empemail" value="<?php echo $data['email']; ?>">
               </div>
@@ -127,23 +127,23 @@ if (isset($_POST['updateemp'])) {
             <div class="p-3 border bg-light">
               <div class="mb-2">
                 <label for="empid" class="form-label">Employee Id:</label>
-                <input type="number" name="empid" class="form-control" id="empid">
+                <input type="number" name="empid" class="form-control" id="empid" value="<?php echo $data2['id']; ?>">
               </div>
               <div class="mb-2">
                 <label for="department" class="form-label">Department:</label>
                 <input type="text" name="department" class="form-control" id="department" value="<?php echo $data2['department']; ?>">
               </div>
-              <div class=" mb-2">
+              <div class="mb-2">
                 <label for="designation" class="form-label">Designation:</label>
-                <input type="text" name="designation" class="form-control" id="designation">
+                <input type="text" name="designation" class="form-control" id="designation" value="<?php echo $data2['designation']; ?>">
               </div>
               <div class="mb-2">
                 <label for="dobjoin" class="form-label">Date Of Joining:</label>
-                <input type="date" name="doj" class="form-control" id="dobjoin">
+                <input type="date" name="doj" class="form-control" id="dobjoin" value="<?php echo $data2['doj']; ?>">
               </div>
               <div class="mb-2 pb-3">
                 <label for="joiningsalary" class="form-label">Joining Salary:</label>
-                <input type="number" name="joiningsalary" class="form-control" id="joiningsalary">
+                <input type="number" name="joiningsalary" class="form-control" id="joiningsalary" value="<?php echo $data2['joiningsalary']; ?>">
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ if (isset($_POST['updateemp'])) {
       </div>
   </div>
   </div>
-  <div class="col py-4" style="margin-left:400px;">
+  <div class=" col py-4" style="margin-left:400px;">
     <button type="submit" name="updateemp" class="btn btn-primary">Submit</button>
   </div>
   </form>

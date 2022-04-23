@@ -29,16 +29,6 @@ include_once("../inc/header.php");
                     </a>
                 </div>
                 <div>
-                    <a href="#" class="card-single btn">
-                        <h1>Update</h1>
-                    </a>
-                </div>
-                <div>
-                    <a href="deleteindividual.php" class="card-single btn">
-                        <h1>Delete</h1>
-                    </a>
-                </div>
-                <div>
                     <a href="../inc/logout.php" class="card-single btn">
                         <h1>Logout</h1>
                     </a>
