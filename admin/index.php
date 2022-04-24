@@ -35,11 +35,4 @@ include_once("../inc/header.php");
                 </div>
         </main>
     </div>
-
-
-
-
-
-
-
 </body>

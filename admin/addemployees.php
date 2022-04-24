@@ -25,7 +25,7 @@ if (isset($_POST['addemp'])) {
     $result1 = mysqli_query($conn, $sql1);
 
     mysqli_commit($conn);
-    header("Location: addemployees.php?error=Employee Record Added Succesfully");
+    header("Location: showall.php?error=Employee Record Added Succesfully");
     exit();
   } catch (mysqli_sql_exception $exception) {
     mysqli_rollback($conn);
